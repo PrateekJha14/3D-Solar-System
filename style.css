@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+#intro {
+    position: relative;
+    height: 100vh;
+    background: url('texture/heading_space_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    transition: opacity 1s ease-out;
+}
+
+.intro-content h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+#solar-system-section {
+    padding: 40px 20px;
+    background: #000000; /* Dark background color for contrast */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center-align text */
+}
+
+#solar-system-section h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+#solar-system-container {
+    display: flex;
+    flex-direction: column; /* Stack planet containers vertically */
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.planet-container {
+    display: flex;
+    flex-direction: row; /* Align model and description horizontally */
+    align-items: center;
+    margin-bottom: 40px; /* Space between each planet section */
+    border: 1px solid #fff;
+    padding: 10px;
+    background: url('texture/panel-2.jpg');
+    width: 80%;
+}
+
+/* Animation for description */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.planet-description {
+    flex: 1;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start from below */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.planet-description.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Move to normal position */
+}
+
+.planet-model {
+    flex: 1;
+    margin-right: 20px; /* Space between model and description */
+}
+
+canvas {
+    width: 100%; /* Full width of the planet-model div */
+    height: 100%;
+}
+
+.planet-description h2 {
+    
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+#load-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.neon-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #00ffff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.neon-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0, 255, 255, 0.5), transparent);
+    transition: all 0.3s ease-in-out;
+    transform: skewX(-30deg);
+    z-index: 0;
+}
+
+.neon-button:hover:before {
+    left: 150%;
+}
+
+.neon-button:hover {
+    color: #00ffff;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+    border-color: #00ffff;
+}
+
+.neon-button:active {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+}
+
+/* Specific styling for the back to main button */
+#back-to-main-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+#back-to-main-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 0 10px #b7ff00, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    border-color: #3d3737;
+}
+
+.glow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(0, 0, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+    background: linear-gradient(90deg, rgba(252,70,107,1) 0%, rgba(63,94,251,1) 100%);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7), 0 0 40px rgba(0, 0, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.neon-button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(255,94,94,1) 0%, rgba(255,30,30,1) 100%);
+    box-shadow: 0 0 20px rgba(255, 30, 30, 0.5), 0 0 30px rgba(255, 30, 30, 0.5);
+    transition: all 0.3s ease;
+}
+
+.neon-button1:hover {
+    background: linear-gradient(90deg, rgba(255,30,30,1) 0%, rgba(255,94,94,1) 100%);
+    box-shadow: 0 0 30px rgba(255, 30, 30, 0.7), 0 0 40px rgba(255, 30, 30, 0.7);
+    transform: scale(1.1);
+}
+

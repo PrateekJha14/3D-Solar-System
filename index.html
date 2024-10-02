@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Back to Main Page Button -->
+    <button id="back-to-main-btn" class="neon-button1">Back to Start</button>
+
+    <!-- Parallax Section -->
+    <section id="intro">
+        <div class="intro-content">
+            <h1>DEEP DIVE IN COSMOLOGY</h1>
+        </div>
+    </section>
+
+    <section id="solar-system-section">
+        <h1>Our Solar System</h1>
+        <div id="solar-system-container">
+            <div class="planet-container" id="sun">
+                <div class="planet-model">
+                    <canvas id="sun-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Sun</h2>
+                    <p>The Sun is the star at the center of our solar system component. Its gravity holds the solar system together.</p>
+                    <a href="https://en.wikipedia.org/wiki/Sun" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="mercury">
+                <div class="planet-model">
+                    <canvas id="mercury-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Mercury</h2>
+                    <p>Mercury is the closest planet to the Sun. It is a small, rocky planet with a thin atmosphere.</p>
+                    <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="venus">
+                <div class="planet-model">
+                    <canvas id="venus-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Venus</h2>
+                    <p>Venus is the second planet from the Sun and is similar in size to Earth.</p>
+                    <a href="https://en.wikipedia.org/wiki/Venus" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="earth">
+                <div class="planet-model">
+                    <canvas id="earth-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Earth</h2>
+                    <p>Earth is the third planet from the Sun and the only known planet to support life.</p>
+                    <a href="https://en.wikipedia.org/wiki/Earth" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="mars">
+                <div class="planet-model">
+                    <canvas id="mars-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Mars</h2>
+                    <p>Mars is the fourth planet from the Sun and is known as the Red Planet.</p>
+                    <a href="https://en.wikipedia.org/wiki/Mars" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="jupiter">
+                <div class="planet-model">
+                    <canvas id="jupiter-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Jupiter</h2>
+                    <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</p>
+                    <a href="https://en.wikipedia.org/wiki/Jupiter" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="saturn">
+                <div class="planet-model">
+                    <canvas id="saturn-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Saturn</h2>
+                    <p>Saturn is the sixth planet from the Sun and is known for its prominent ring system.</p>
+                    <a href="https://en.wikipedia.org/wiki/Saturn" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="uranus">
+                <div class="planet-model">
+                    <canvas id="uranus-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Uranus</h2>
+                    <p>Uranus is the seventh planet from the Sun and has a unique sideways rotation.</p>
+                    <a href="https://en.wikipedia.org/wiki/Uranus" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="neptune">
+                <div class="planet-model">
+                    <canvas id="neptune-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Neptune</h2>
+                    <p>Neptune is the eighth planet from the Sun and is known for its deep blue color and strong winds.</p>
+                    <a href="https://en.wikipedia.org/wiki/Neptune" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+            <div class="planet-container" id="pluto">
+                <div class="planet-model">
+                    <canvas id="pluto-canvas"></canvas>
+                </div>
+                <div class="planet-description">
+                    <h2>Pluto</h2>
+                    <p>Pluto, officially designated as (134340) Pluto, is the largest known dwarf planet in our solar system, located beyond the orbit of Neptune.</p>
+                    <a href="https://en.wikipedia.org/wiki/Pluto" class="glow-button" target="_blank">Check Me Out!</a>
+                </div>
+            </div>
+        </div>
+        <div class="load-button-container">
+            <button id="load-solar-system-btn" class="neon-button">Load Entire Solar System 3D Model</button>
+        </div>
+    </section>
+
+    <script src="three.js"></script>
+    <script src="app.js"></script>
+    <script src="parallax.js"></script>
+    <script type="module" src="load-model.js"></script>
+    <script src="toggle-button.js"></script>
+</body>
+</html>
